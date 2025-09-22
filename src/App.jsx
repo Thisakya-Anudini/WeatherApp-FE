@@ -1,18 +1,29 @@
 import React from 'react';
+import { Auth0Provider } from '@auth0/auth0-react';  // Import necessary Auth0 components
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
+import WeatherDetails from './components/WeatherDetails';
 
+
+// Access environment variables from Vite
+const domain = import.meta.env.VITE_AUTH0_DOMAIN;
+const clientId = import.meta.env.VITE_AUTH0_CLIENT_ID;
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        {/* Route for Home page (shows weather cards for cities) */}
-        <Route path="/" element={<Home />} />
-        
+    <Auth0Provider
+      domain={domain} // The Auth0 domain from .env
+      clientId={clientId} // The Auth0 client ID from .env
+      authorizationParams={{ redirect_uri: window.location.origin }} // Redirect URI after login
+    >
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/weather/:cityCode" element={<WeatherDetails />} />
 
-      </Routes>
-    </Router>
+        </Routes>
+      </Router>
+    </Auth0Provider>
   );
 }
 
