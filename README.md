@@ -19,16 +19,16 @@ Key functionalities include secure authentication via **Auth0**, live weather da
 ## Screenshots
 
 ### 🔐 Login Page  
-![Login Screenshot](./assests/2.jpg)
+![Login Screenshot](./assets/2.jpg)
 
 ### 🌤️ Weather Dashboard  
-![Dashboard Screenshot](./assests/3.jpg)
+![Dashboard Screenshot](./assets/3.jpg)
 
 ### 🌤️ Weather results for a specific city 
-![City Screenshot](./assests/4.jpg)
+![City Screenshot](./assets/4.jpg)
 
 ### 📱 Mobile View  
-![Mobile Screenshot](./assests/5.jpg)
+![Mobile Screenshot](./assets/5.jpg)
 
 ---
 
@@ -99,7 +99,7 @@ Create a `.env` file in the **frontend** directory and add any necessary variabl
 **Backend:**
 
 ```bash
-cd WeatherApp-BE
+cd weatherapp_backend
 npm start
 ```
 
@@ -108,22 +108,12 @@ Backend will run at: `http://localhost:5000`
 **Frontend:**
 
 ```bash
-cd WeatherApp-FE
+cd weatherapp_frontend 
 npm run dev
 ```
 
 Frontend will run at: `http://localhost:5173`
 
-
----
-
-## How to Use
-
-1. **Login/Sign Up**  
-   Use Auth0 to securely log in or register a new account.
-
-2. **View Weather Details**  
-   Instantly see temperature, humidity, wind speed, and more.
 
 ---
 
@@ -138,5 +128,4 @@ Frontend will run at: `http://localhost:5173`
 - **OpenWeatherMap API** – Real-time weather data  
 - **NodeCache** – In-memory caching for performance  
 
----
 
