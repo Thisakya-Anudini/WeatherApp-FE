@@ -91,14 +91,14 @@ function Home() {
 
       {/* Weather Data Section */}
       {isAuthenticated && (
-        <div className="w-full mt-6">
+        <div className="w-full mt-6 flex flex-col items-center justify-center">
           {/* Search Bar */}
-          <div className="w-full flex flex-col sm:flex-row items-center justify-center mt-2 gap-0 relative">
+          <div className="w-full flex flex-col sm:flex-row items-center justify-center mt-2 gap-4 sm:gap-8 relative">
             <input
               type="text"
               value={cityInput}
               onChange={(e) => setCityInput(e.target.value)}
-              className="w-[250px] sm:w-[250px] p-2 rounded-md bg-stone-950 text-white "
+              className="w-[250px] sm:w-[250px] p-2 rounded-md bg-stone-950 text-white"
               placeholder="Enter a city"
             />
             <button
@@ -110,13 +110,13 @@ function Home() {
           </div>
 
           {/* Weather Cards Display */}
-          <div className="flex flex-wrap justify-center gap-6 mt-10 sm:gap-8 md:gap-10">
+          <div className="flex flex-wrap justify-center gap-6 mt-10 sm:gap-8 md:gap-10 w-full">
             {weatherData.map((data, index) => (
               <Link
                 key={index}
                 to={`/weather/${data.cityCode}`}
                 state={{ weatherData: data }}  
-                className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
+                className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 flex justify-center"
               >
                 <WeatherCard weather={data} />
               </Link>

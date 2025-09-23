@@ -1,36 +1,142 @@
-# Weather App - Frontend
+# Weather App 🌦️ - Frontend
 
-## Overview
+## About The Project
 
-The **Frontend** of the **Weather App** provides the user interface (UI) for interacting with the weather data. Built using **React.js** and **Vite**, this frontend communicates with the backend to fetch weather data and displays it in a user-friendly format. The app shows live weather updates, temperature, humidity, wind speed, and weather conditions like clear sky, rain, etc. Additionally, the app integrates **Two-Factor Authentication (2FA)** for added security.
+The **Weather App** provides users with real-time weather updates, featuring a clean and interactive interface to check weather conditions across cities worldwide. Built with the **MERN stack** (MongoDB, Express.js, React.js, and Node.js), the app allows users to securely log in, view personalized weather data, and receive up-to-date weather forecasts.
 
-This project uses **Vite** as the build tool for fast development and bundling.
+Key functionalities include secure authentication via **Auth0**, live weather data fetched from the **OpenWeatherMap API**, and a responsive user interface for both mobile and desktop devices.
 
----
+### Built With
 
-## Features
-
-- **Real-Time Weather Updates**: Fetches live weather data from the backend.
-- **User-Friendly Interface**: A clean and responsive UI built with React.
-- **Weather Icons**: Icons representing weather conditions (e.g., sunny, rainy).
-- **Two-Factor Authentication (2FA)**: Secure login using Google Authenticator.
-- **Fast Refresh**: Instant feedback during development, thanks to **Vite's Hot Module Replacement (HMR)**.
+- **Frontend**: React.js, Vite, TailwindCSS  
+- **Backend**: Node.js, Express.js (refer to the backend repository)  
+- **Authentication**: Auth0 (with optional Multi-Factor Authentication)  
+- **Weather Data**: OpenWeatherMap API  
+- **Caching**: NodeCache for performance optimization  
 
 ---
 
-## Installation
+## Screenshots
+
+### 🔐 Login Page  
+![Login Screenshot](./assests/2.jpg)
+
+### 🌤️ Weather Dashboard  
+![Dashboard Screenshot](./assests/3.jpg)
+
+### 🌤️ Weather results for a specific city 
+![City Screenshot](./assests/4.jpg)
+
+### 📱 Mobile View  
+![Mobile Screenshot](./assests/5.jpg)
+
+---
+
+## Key Features
+
+- 🌍 **Global Coverage**: View weather conditions for cities around the world  
+- 🔐 **Secure Authentication**: Auth0 login with optional MFA  
+- 🌡️ **Real-Time Weather Data**: Temperature, humidity, wind speed, and more  
+- 📱 **Responsive Design**: Optimized for mobile, tablet, and desktop  
+- ⚡ **Efficient Caching**: Reduces API calls with 5-minute cache window  
+
+---
+
+## Getting Started
+
+Follow these steps to get the Weather App up and running locally.
 
 ### Prerequisites
 
-Ensure you have the following installed:
+Make sure you have the following installed:
 
-- **Node.js** (v14 or higher)
-- **npm** (Node Package Manager)
-- **Git** (to clone the repositories)
+- [Node.js](https://nodejs.org/) (v14 or higher)  
+- npm (Node Package Manager)  
+- Git  
+- Auth0 Account  
 
-### Clone the Repository
+---
 
-Clone the **frontend** repository to your local machine:
+### Setup Instructions
+
+#### 1. Clone the Repositories
 
 ```bash
 git clone https://github.com/Thisakya-Anudini/WeatherApp-FE
+git clone https://github.com/Thisakya-Anudini/WeatherApp-BE
+```
+
+#### 2. Install Dependencies
+
+**Backend:**
+
+```bash
+cd WeatherApp-BE
+npm install
+```
+
+**Frontend:**
+
+```bash
+cd WeatherApp-FE
+npm install
+```
+
+#### 3. Set Up Environment Variables
+
+Create a `.env` file in the **backend** directory:
+
+```env
+OPENWEATHERMAP_API_KEY=your_openweathermap_api_key
+AUTH0_DOMAIN=your_auth0_domain
+AUTH0_CLIENT_ID=your_auth0_client_id
+```
+
+Create a `.env` file in the **frontend** directory and add any necessary variables.
+
+#### 4. Run the Application
+
+**Backend:**
+
+```bash
+cd WeatherApp-BE
+npm start
+```
+
+Backend will run at: `http://localhost:5000`
+
+**Frontend:**
+
+```bash
+cd WeatherApp-FE
+npm run dev
+```
+
+Frontend will run at: `http://localhost:5173`
+
+
+---
+
+## How to Use
+
+1. **Login/Sign Up**  
+   Use Auth0 to securely log in or register a new account.
+
+2. **View Weather Details**  
+   Instantly see temperature, humidity, wind speed, and more.
+
+---
+
+## Technologies and Tools Used
+
+- **React.js** – Dynamic frontend UI  
+- **Vite** – Fast build tool for development  
+- **TailwindCSS** – Utility-first CSS framework  
+- **Node.js** – Backend runtime environment  
+- **Express.js** – API routing and server logic  
+- **Auth0** – Authentication and MFA  
+- **OpenWeatherMap API** – Real-time weather data  
+- **NodeCache** – In-memory caching for performance  
+
+---
+

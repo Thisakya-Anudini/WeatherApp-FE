@@ -69,56 +69,57 @@ function WeatherDetails() {
   }
 
   return (
-    <div className="min-h-screen bg-[url(./1.jpg)] bg-cover bg-center flex flex-col items-center p-4">
-      <h1 className="text-2xl font-bold text-white mt-8 flex items-center justify-center">
+    <div className="min-h-screen flex flex-col bg-[url(./1.jpg)] bg-cover bg-center items-center p-4">
+      <h1 className="text-2xl sm:text-3xl font-bold text-white mt-8 flex items-center justify-center">
         <IoIosPartlySunny className="w-10 h-10 mr-4 text-white" />
         Weather App
       </h1>
 
-      <div className="w-[600px] h-[350px] bg-gray-800 shadow-lg rounded-md overflow-hidden flex flex-col relative mt-8">
+      <div className="w-full sm:w-[600px] h-auto bg-gray-800 shadow-lg rounded-md overflow-hidden flex flex-col relative mt-8">
         {/* Back Button with z-index to bring it to the front */}
         <div className="absolute left-0 top-0 z-10">
-          <Link to="/" className="text-white mt-6 flex items-center justify-center text-lg">
+          <Link to="/" className="text-white mt-6 flex items-center justify-center text-lg sm:text-xl">
             <IoIosArrowBack className="mr-2 text-2xl font-bold" />
           </Link>
         </div>
 
         {/* Upper part of the card with dynamic background image */}
         <div 
-          className="w-[600px] h-[250px] flex flex-col justify-center items-center p-8 relative"
+          className="w-full sm:w-[600px] h-auto sm:h-[250px] flex flex-col justify-center items-center p-4 sm:p-8 relative"
           style={{
             backgroundImage: `url(${weatherInfo.image})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         >
-          <h2 className="text-6xl font-bold text-white">{weatherDetail.city}</h2> {/* City  */}
+          <h2 className="text-4xl sm:text-6xl font-bold text-white">{weatherDetail.city}</h2> {/* City  */}
 
-          <div className="flex flex-row items-center justify-between gap-30 mt-10">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-12 mt-6 sm:mt-10">
             <div className="flex flex-col items-center justify-center">
-              <p className="text-2xl text-white mt-5">{weatherDetail.weather}</p> {/* Weather condition */}
+              <p className="text-xl sm:text-2xl text-white mt-5">{weatherDetail.weather}</p> {/* Weather condition */}
               {getWeatherIcon(weatherCondition)} {/* Display the weather icon again */}
             </div>
 
-            <p className="text-5xl font-bold text-white">{weatherDetail.temperature}°C</p>
+            <p className="text-4xl sm:text-5xl font-bold text-white">{weatherDetail.temperature}°C</p>
           </div>
         </div>
 
         {/* Lower part of the card */}
-        <div className="flex justify-between text-white bg-gray-800 w-[600px] h-[150px] p-2">
+        <div className="flex flex-col sm:flex-row justify-between text-white bg-gray-800 w-full sm:w-[600px] h-auto sm:h-[150px] p-4 sm:p-2">
           {/* Left section: Humidity */}
-          <div className="flex flex-col items-center justify-center w-1/2 text-md">
+          <div className="flex flex-col items-center justify-center w-full sm:w-1/2 text-md sm:text-lg">
             <p>Humidity: {weatherDetail.humidity || 'N/A'} %</p>
           </div>
 
           {/* Right section: Wind Speed */}
-          <div className="flex flex-col items-center w-1/2 text-md justify-center">
+          <div className="flex flex-col items-center justify-center w-full sm:w-1/2 text-md sm:text-lg">
             <p>Wind Speed: {weatherDetail.windSpeed || 'N/A'} m/s</p>
           </div>
         </div>
       </div>
 
-      <footer className="w-full bg-gray-800 text-center text-white py-4 absolute bottom-0">
+      {/* Footer */}
+      <footer className="w-full bg-gray-800 text-center text-white py-4 mt-6 sm:mt-8 flex-shrink-0">
         <p>2025 Fidenz Technologies</p>
       </footer>
     </div>
