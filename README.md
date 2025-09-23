@@ -71,14 +71,14 @@ git clone https://github.com/Thisakya-Anudini/WeatherApp-BE
 **Backend:**
 
 ```bash
-cd WeatherApp-BE
+cd weatherapp_backend  
 npm install
 ```
 
 **Frontend:**
 
 ```bash
-cd WeatherApp-FE
+cd weatherapp_frontend  
 npm install
 ```
 
