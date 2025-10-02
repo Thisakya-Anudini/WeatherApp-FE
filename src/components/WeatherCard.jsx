@@ -49,7 +49,7 @@ function WeatherCard({ weather }) {
       case 'mist':
         return <RiMistFill className="text-white w-10 h-10" />;
       default:
-        return < BsClouds className="text-white w-10 h-10" />;
+        return <BsClouds className="text-white w-10 h-10" />;
     }
   };
 
@@ -81,14 +81,14 @@ function WeatherCard({ weather }) {
       </div>
 
       {/* Lower part of the card */}
-      <div className="flex justify-between text-white bg-gray-800 w-[320px] h-[70px] p-1">
+      <div className="flex justify-between text-white bg-gray-800 w-[320px] h-[70px] p-8">
         {/* Left section: Pressure, Humidity, and Visibility */}
-        <div className="flex flex-col items-center w-1/2 text-xs justify-center">
+        <div className="flex flex-col items-center  text-xs justify-center">
           <p>Humidity: {weather.humidity || 'N/A'} %</p>
         </div>
 
         {/* Middle section: Wind Speed with Icon */}
-        <div className="flex flex-col items-center w-1/2 text-sm justify-center">
+        <div className="flex flex-col items-center  text-sm justify-center">
           <p>Wind Speed: {weather.windSpeed || 'N/A'} m/s</p>
         </div>
       </div>

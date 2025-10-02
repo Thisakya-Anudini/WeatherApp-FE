@@ -19,16 +19,16 @@ Key functionalities include secure authentication via **Auth0**, live weather da
 ## Screenshots
 
 ### 🔐 Login Page  
-![Login Screenshot](./assests/2.jpg)
+![Login Screenshot](./assets/2.jpg)
 
 ### 🌤️ Weather Dashboard  
-![Dashboard Screenshot](./assests/3.jpg)
+![Dashboard Screenshot](./assets/3.jpg)
 
 ### 🌤️ Weather results for a specific city 
-![City Screenshot](./assests/4.jpg)
+![City Screenshot](./assets/4.jpg)
 
 ### 📱 Mobile View  
-![Mobile Screenshot](./assests/5.jpg)
+![Mobile Screenshot](./assets/5.jpg)
 
 ---
 

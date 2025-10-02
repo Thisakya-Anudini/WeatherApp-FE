@@ -119,7 +119,7 @@ function WeatherDetails() {
       </div>
 
       {/* Footer */}
-      <footer className="w-full bg-gray-800 text-center text-white py-4 mt-6 sm:mt-8 flex-shrink-0">
+      <footer className="w-full bg-gray-800 text-center text-white py-4 mt-6 sm:mt-8 flex-shrink-0 fixed bottom-0">
         <p>2025 Fidenz Technologies</p>
       </footer>
     </div>
