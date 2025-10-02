@@ -1,3 +1,4 @@
+
 # Weather App 🌦️ - Frontend
 
 ## About The Project
@@ -87,9 +88,21 @@ npm install
 Create a `.env` file in the **backend** directory:
 
 ```env
-OPENWEATHERMAP_API_KEY=your_openweathermap_api_key
-AUTH0_DOMAIN=your_auth0_domain
-AUTH0_CLIENT_ID=your_auth0_client_id
+API_KEY=OpenWeatherMap API key for fetching weather data
+AUTH0_DOMAIN= Auth0 Domain 
+API_IDENTIFIER=The identifier (audience) for your API 
+FRONTEND_URL=URL of your frontend app 
+PORT=The port the backend server will run on
+
+```
+
+Create a `.env` file in the **frontend** directory:
+
+```env
+VITE_AUTH0_DOMAIN=your_auth0_domain 
+VITE_AUTH0_CLIENT_ID=Auth0 Client ID  
+VITE_BACKEND_URL=Backend URL
+
 ```
 
 Create a `.env` file in the **frontend** directory and add any necessary variables.
